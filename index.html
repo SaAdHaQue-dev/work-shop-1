@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Workshop | Apna Future Banao</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg"></canvas>
+  <div class="progress"><div id="progressBar"></div></div>
+
+  <nav class="dots" id="dots" aria-label="Sections"></nav>
+
+  <header class="topbar">
+    <div class="brand"><span class="logo">◈</span> <span id="instName">Your Institute</span></div>
+    <div class="hint">⬇ Arrow keys / scroll se aage badhein &nbsp;|&nbsp; <kbd>F</kbd> fullscreen</div>
+  </header>
+
+  <main id="slides">
+
+    <!-- 1. HERO -->
+    <section class="slide hero" id="s-hero">
+      <div class="glow g1"></div><div class="glow g2"></div>
+      <p class="tag">AI WORKSHOP • CLASS 11 &amp; 12</p>
+      <h1>AI se apna <span class="grad" id="typed"></span><span class="cursor">|</span></h1>
+      <p class="sub">Kal ki duniya AI chalayega. Sawaal ye hai: <b>aap use chalayenge ya wo aapko?</b></p>
+      <div class="counters">
+        <div class="counter"><span data-count="100" data-suffix="M+">0</span><small>ChatGPT jaise tools ke users</small></div>
+        <div class="counter"><span data-count="97" data-suffix="M">0</span><small>naye AI jobs ka anumaan (2025 tak)</small></div>
+        <div class="counter"><span data-count="1" data-suffix=" din">0</span><small>me seekh sakte ho shuruaat</small></div>
+      </div>
+      <button class="btn" onclick="goNext()">Shuru karein →</button>
+    </section>
+
+    <!-- 2. AI KYA HAI -->
+    <section class="slide" id="s-what">
+      <p class="tag">01 • BASICS</p>
+      <h2>AI kya hai? <span class="grad">Simple bhasha me</span></h2>
+      <div class="flow">
+        <div class="step"><div class="ico">📚</div><h3>Data</h3><p>Lakhon kitaabein, photos, videos</p></div>
+        <div class="arrow">➜</div>
+        <div class="step"><div class="ico">🧠</div><h3>Learning</h3><p>Pattern pehchanna seekhta hai</p></div>
+        <div class="arrow">➜</div>
+        <div class="step"><div class="ico">💡</div><h3>Prediction</h3><p>Agla sahi jawab andaza lagata hai</p></div>
+        <div class="arrow">➜</div>
+        <div class="step"><div class="ico">🚀</div><h3>Kaam</h3><p>Likhna, banana, samjhana</p></div>
+      </div>
+      <p class="note">AI jaadu nahi hai. Ye <b>maths + data + computer power</b> hai — aur aap ise seekh sakte ho.</p>
+    </section>
+
+    <!-- 3. KYA KAR SAKTA HAI -->
+    <section class="slide" id="s-cards">
+      <p class="tag">02 • POWER</p>
+      <h2>AI aaj kya-kya <span class="grad">kar sakta hai?</span></h2>
+      <p class="sub small">Card par click karke dekhein 👇</p>
+      <div class="cards" id="cards"></div>
+      <div class="cardout" id="cardOut">Kisi card par click karein…</div>
+    </section>
+
+    <!-- 4. LIVE DEMO -->
+    <section class="slide" id="s-demo">
+      <p class="tag">03 • LIVE DEMO</p>
+      <h2>Apna <span class="grad">AI Career Guide</span> try karo</h2>
+      <p class="sub small">Apni pasand chuno, ya khud sawaal likho.</p>
+      <div class="chips" id="chips"></div>
+      <div class="chat">
+        <div class="chatbox" id="chatbox">
+          <div class="msg ai">Namaste! 👋 Main AI Career Guide hoon. Apni pasand chuno ya kuch bhi poocho — jaise "coding kaise seekhein?"</div>
+        </div>
+        <form id="chatForm">
+          <input id="chatInput" type="text" placeholder="Yahan sawaal likho…" autocomplete="off">
+          <button class="btn sm" type="submit">Bhejo</button>
+        </form>
+      </div>
+      <p class="mini">* Ye workshop demo hai (offline, pre-built jawab). Asli AI tools jaise Claude/ChatGPT isse kai guna powerful hain.</p>
+    </section>
+
+    <!-- 5. QUIZ -->
+    <section class="slide" id="s-quiz">
+      <p class="tag">04 • GAME TIME</p>
+      <h2>AI <span class="grad">Quiz Challenge</span></h2>
+      <div class="quiz" id="quiz"></div>
+    </section>
+
+    <!-- 6. CAREER -->
+    <section class="slide" id="s-career">
+      <p class="tag">05 • CAREER</p>
+      <h2>12th ke baad <span class="grad">AI me kaise jaayein?</span></h2>
+      <div class="tabs" id="tabs"></div>
+      <div class="tabbody" id="tabBody"></div>
+    </section>
+
+    <!-- 7. TIMELINE -->
+    <section class="slide" id="s-time">
+      <p class="tag">06 • TIMELINE</p>
+      <h2>AI ka safar: <span class="grad">kal, aaj, kal</span></h2>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- 8. AGENDA + CTA -->
+    <section class="slide" id="s-end">
+      <p class="tag">07 • AGLA KADAM</p>
+      <h2>Aaj se <span class="grad">shuru karo!</span></h2>
+      <div class="agenda" id="agenda"></div>
+      <div class="cta">
+        <div class="qr" id="qr">QR<br><small>yahan apna QR lagayein</small></div>
+        <div>
+          <h3>Judein hamare saath</h3>
+          <p id="contact">📞 Contact: 00000-00000 &nbsp;|&nbsp; 📧 email@institute.com</p>
+          <p class="mini">Sawaal? Abhi poochho! 🙋</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
